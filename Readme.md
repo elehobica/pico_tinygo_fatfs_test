@@ -53,9 +53,9 @@ This project supports:
 ```
 > wsl
 (in WSL2 shell)
-$ docker pull docker pull tinygo/tinygo
+$ docker pull tinygo/tinygo:0.22.0
 $ docker images
-$ docker run -it -v /mnt/d/somewhere/share:/share tinygo/tinygo:latest /bin/bash
+$ docker run -it -v /mnt/d/somewhere/share:/share tinygo/tinygo:0.22.0 /bin/bash
 (in docker container)
 # cd /share
 
@@ -73,7 +73,7 @@ $ docker run -it -v /mnt/d/somewhere/share:/share tinygo/tinygo:latest /bin/bash
 
 * TinyGo Build
 ```
-# tinygo build -target=pico -o pico_tinygo_fatfs_test.uf2
+# tinygo build -target=pico --serial uart -o pico_tinygo_fatfs_test.uf2
 
 (copy UF2 back to Windows local if working on docker native directory)
 (# cp pico_tinygo_fatfs_test.uf2 /share/pico_tinygo_fatfs_test/ )

@@ -63,6 +63,10 @@ func main() {
 	led := &Pin{&ledPin}
 	led.Configure(machine.PinConfig{Mode: machine.PinOutput})
 	led.High()
+	sckPin.Configure(machine.PinConfig{Mode: machine.PinOutput})
+	sdoPin.Configure(machine.PinConfig{Mode: machine.PinOutput})
+	sdiPin.Configure(machine.PinConfig{Mode: machine.PinInputPullup})
+	csPin.Configure(machine.PinConfig{Mode: machine.PinOutput})
 
 	err := fatfs_test(led)
 	if err != nil {

@@ -22,7 +22,6 @@
 /
 /----------------------------------------------------------------------------*/
 
-
 #ifndef FF_DEFINED
 #define FF_DEFINED  86604   /* Revision ID */
 
@@ -252,7 +251,7 @@ typedef struct {
 
 /* File function return code (FRESULT) */
 
-typedef enum {
+typedef enum _FRESULT {
     FR_OK = 0,              /* (0) Succeeded */
     FR_DISK_ERR,            /* (1) A hard error occurred in the low level disk I/O layer */
     FR_INT_ERR,             /* (2) Assertion failed */
