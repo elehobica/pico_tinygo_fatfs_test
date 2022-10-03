@@ -2,7 +2,7 @@
 ## Overview
 This project is an example of FatFs on Raspberry Pi Pico by TinyGo.
 * ported from [elehobica/pico_fatfs_test](https://github.com/elehobica/pico_fatfs_test)
-* confirmed with TinyGo 0.22.0
+* confirmed with TinyGo 0.25.0
 
 This project supports:
 * FatFs R0.13c ([http://elm-chan.org/fsw/ff/00index_e.html](http://elm-chan.org/fsw/ff/00index_e.html))
@@ -53,9 +53,9 @@ This project supports:
 ```
 > wsl
 (in WSL2 shell)
-$ docker pull tinygo/tinygo:0.22.0
+$ docker pull tinygo/tinygo:0.25.0
 $ docker images
-$ docker run -it -v /mnt/d/somewhere/share:/share tinygo/tinygo:0.22.0 /bin/bash
+$ docker run -it -v /mnt/d/somewhere/share:/share tinygo/tinygo:0.25.0 /bin/bash
 (in docker container)
 # cd /share
 
@@ -73,7 +73,7 @@ $ docker run -it -v /mnt/d/somewhere/share:/share tinygo/tinygo:0.22.0 /bin/bash
 
 * TinyGo Build
 ```
-# tinygo build -target=pico --serial uart -o pico_tinygo_fatfs_test.uf2
+# tinygo build -target=pico --serial uart -opt 2 -o pico_tinygo_fatfs_test.uf2
 
 (copy UF2 back to Windows local if working on docker native directory)
 (# cp pico_tinygo_fatfs_test.uf2 /share/pico_tinygo_fatfs_test/ )
@@ -85,7 +85,7 @@ Then, go back to Windows environment and put "pico_tinygo_fatfs_test.uf2" on RPI
 
 ## Benchmark Comparison with C++
 ### Sansung microSDHC EVO Plus 32GB (UHS-I U1)
-* Reference [pico_fatfs_test](https://github.com/elehobica/pico_fatfs_test)
+* Reference C++ [pico_fatfs_test](https://github.com/elehobica/pico_fatfs_test)
 ```
 =====================
 == pico_fatfs_test ==

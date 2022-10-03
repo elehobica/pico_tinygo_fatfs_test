@@ -36,21 +36,21 @@ func (pin Pin) ErrorBlinkFor(count int) {
 	for {
 		for i := 0; i < count; i++ {
 			pin.High()
-			time.Sleep(250 * time.Millisecond)
+			//time.Sleep(250 * time.Millisecond)
 			pin.Low()
-			time.Sleep(250 * time.Millisecond)
+			//time.Sleep(250 * time.Millisecond)
 		}
 		pin.Low()
-		time.Sleep(500 * time.Millisecond)
+		//time.Sleep(500 * time.Millisecond)
 	}
 }
 
 func (pin Pin) OkBlinkFor() {
 	for {
 		pin.High()
-		time.Sleep(1000 * time.Millisecond)
+		//time.Sleep(1000 * time.Millisecond)
 		pin.Low()
-		time.Sleep(1000 * time.Millisecond)
+		//time.Sleep(1000 * time.Millisecond)
 	}
 }
 
